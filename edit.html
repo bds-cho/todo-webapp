@@ -13,9 +13,30 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1>Edit TODOs</h1>
-    <p>Here you can edit a already created TODO.</p>
+  <!-- Heading -->
+  <div class="container mx-auto m-5">
+    <h1 style="text-align: center;">Edit TODO</h1>
+  </div>
+  <div class="container mx-auto m-2">
+    <form>
+      <div class="form-group m-2">
+        <label for="desc">Description:</label>
+        <textarea class="form-control form-control-lg" id="desc" rows="3" placeholder="Enter Description"></textarea>
+      </div>
+      <div class="row m-2">
+        <div class="col m-2">
+          <label for="date">Due Date:</label>
+          <input id="date" type="date"/>
+        </div>
+        <div class="col m-2">
+          <label for="comp">Completion (<b><output id="num">0</output>%</b>):</label>
+          <input id="comp" type="range" name="amountRange" step="1" min="0" max="100" value="0" oninput="num.value=this.value"/>
+        </div>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary m-2">Update</button>
+      </div>
+    </form>
   </div>
 </body>
 

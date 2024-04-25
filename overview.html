@@ -13,9 +13,45 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1>Overview of TODOs</h1>
-    <p>Here you will find all your TODOs and be able to create, edit or delete them.</p>
+  <!-- Heading -->
+  <div class="container mx-auto m-5">
+    <h1 style="text-align: center;">Overview of TODOs</h1>
+  </div>
+  <!-- Overview Table -->
+  <div class="container mx-auto m-2">
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Description</th>
+            <th scope="col">Due Date</th>
+            <th scope="col">Completion</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>This is an example TODO</td>
+            <td>29.04.2024</td>
+            <td>10%</td>
+            <td>
+                <button class="btn btn-primary btn-sm" type="submit">Edit</button>
+                <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>This is also an example TODO</td>
+            <td>29.04.2024</td>
+            <td>20%</td>
+            <td>
+                <button class="btn btn-primary btn-sm" type="submit">Edit</button>
+                <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
   </div>
 </body>
 
