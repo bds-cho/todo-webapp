@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="de">
 
 <head>
   <meta charset="UTF-8">
@@ -26,12 +26,12 @@
             <a class="nav-link active" aria-current="page" href="overview.html">Overview</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="new.html">Create TODO</a>
+            <a class="nav-link" href="create.html">Create TODO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="impressum.html">Impressum</a>
           </li>
         </ul>
-        <span class="navbar-text">
-            <a class="nav-link" href="impressum.html">Impressum</a>
-        </span>
       </div>
     </div>
   </nav>
@@ -43,16 +43,16 @@
     <form>
       <div class="form-group m-2">
         <label for="desc">Description:</label>
-        <textarea class="form-control form-control-lg" id="desc" rows="3" placeholder="Enter Description"></textarea>
+        <textarea class="form-control form-control-lg" id="desc" rows="3" placeholder="Enter Description">Already existing description here.</textarea>
       </div>
       <div class="row m-2">
         <div class="col m-2">
           <label for="date">Due Date:</label>
-          <input id="date" type="date"/>
+          <input id="date" type="date" data-date-format="DD/MM/YYYY" value="2024-04-29"/>
         </div>
         <div class="col m-2">
-          <label for="comp">Completion (<b><output id="num">0</output>%</b>):</label>
-          <input id="comp" type="range" name="amountRange" step="1" min="0" max="100" value="0" oninput="num.value=this.value"/>
+          <label for="comp">Completion (<b><output id="num">10</output>%</b>):</label>
+          <input id="comp" type="range" name="amountRange" step="1" min="0" max="100" value="10" oninput="num.value=this.value"/>
         </div>
       </div>
       <div class="text-center">
