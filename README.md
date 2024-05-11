@@ -4,7 +4,7 @@
 2. Create DB and table using MySQL's command-line client:
     - `CREATE DATABASE flaskDB;`
     - `USE flaskDB;`
-    - `CREATE TABLE todos(id INT AUTO INCREMENT PRIMARY KEY, des VARCHAR(100), due DATE, comp INT);`
+    - `CREATE TABLE todos(id INT AUTO_INCREMENT PRIMARY KEY, des VARCHAR(100), due DATE, comp INT);`
 3. Clone this repo: `git clone https://git.tu-berlin.de/bschouhan_29/pp-sksy-ha12-10.git`
 4. Switch directory to cloned repo: `cd pp-sksy-ha12-10`
 5. Create python venv: `python -m venv ./venv`

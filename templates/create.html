@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -22,13 +23,13 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="overview.html">Overview</a>
+            <a class="nav-link" href="{{ url_for('index') }}">Overview</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="create.html">Create TODO</a>
+            <a class="nav-link active" aria-current="page" href="{{ url_for('create') }}">Create TODO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="imprint.html">Imprint</a>
+            <a class="nav-link" href="{{ url_for('imprint') }}">Imprint</a>
           </li>
         </ul>
       </div>
@@ -38,6 +39,7 @@
   <div class="container mx-auto m-5">
     <h1 style="text-align: center;">Create TODO</h1>
   </div>
+
   <div class="container mx-auto m-2">
     <form method="POST" action="">
       <div class="form-group m-2">
@@ -47,7 +49,7 @@
       <div class="row m-2">
         <div class="col m-2">
           <label for="date">Due Date:</label>
-          <input id="date" name="date" type="date"/>
+          <input id="date" name="date" type="date" value="{{ default_date }}"/>
         </div>
         <div class="col m-2">
           <label for="comp">Completion (<b><output id="num">0</output>%</b>):</label>

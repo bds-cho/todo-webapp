@@ -23,13 +23,13 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="overview.html">Overview</a>
+            <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Overview</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="create.html">Create TODO</a>
+            <a class="nav-link" href="{{ url_for('create') }}">Create TODO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="imprint.html">Imprint</a>
+            <a class="nav-link" href="{{ url_for('imprint') }}">Imprint</a>
           </li>
         </ul>
       </div>
@@ -40,19 +40,19 @@
     <h1 style="text-align: center;">Edit TODO</h1>
   </div>
   <div class="container mx-auto m-2">
-    <form>
+    <form action="" method="POST">
       <div class="form-group m-2">
         <label for="desc">Description:</label>
-        <textarea class="form-control form-control-lg" id="desc" rows="3" placeholder="Enter Description">Already existing description here.</textarea>
+        <textarea class="form-control form-control-lg" id="desc" name="desc" rows="3">{{ task.1 }}</textarea>
       </div>
       <div class="row m-2">
         <div class="col m-2">
           <label for="date">Due Date:</label>
-          <input id="date" type="date" data-date-format="DD/MM/YYYY" value="2024-04-29"/>
+          <input id="date" name="date" type="date" data-date-format="DD/MM/YYYY" value="{{ task.2 }}"/>
         </div>
         <div class="col m-2">
-          <label for="comp">Completion (<b><output id="num">10</output>%</b>):</label>
-          <input id="comp" type="range" name="amountRange" step="1" min="0" max="100" value="10" oninput="num.value=this.value"/>
+          <label for="comp">Completion (<b><output id="num" >{{ task.3 }}</output>%</b>):</label>
+          <input id="comp" type="range" name="comp" step="1" min="0" max="100" value="{{ task.3 }}" oninput="num.value=this.value"/>
         </div>
       </div>
       <div class="text-center">
