@@ -13,3 +13,9 @@
 8. Install python dependencies: `pip install flask flask-mysqldb`
 9. Start flask server: `python3 app.py`
 10. Test on your browser: `http://localhost:5000`
+### Deployment using Docker:
+1. Clone this repo: `git clone https://git.tu-berlin.de/bschouhan_29/pp-sksy-ha12-10.git`
+2. Switch directory to cloned repo: `cd pp-sksy-ha12-10`
+3. Build image with Docker: `build . -t todo-website:latest`
+4. Deploy Docker container: `docker run --rm -i -p 5000:5000 --name=todo-web todo-website:latest`
+5. Test on your browser: `http://localhost:5000`
